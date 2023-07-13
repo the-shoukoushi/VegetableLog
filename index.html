@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> VegMart | BY Delta</title>
+
+</head>
+<frameset rows="20%,20%,70%" frameborder="1" border="1">
+    <frame name="header" src="http://127.0.0.1:5500/header.html" />
+    <frameset cols="20%,80%" frameborder="1" border="1">
+    </frameset>
+    <frame name="footer" src="http://127.0.0.1:5500/footer.html" />
+</frameset>
+<noframes>
+
+</html>
+
+<body>
+    <!-- HEADER -->
+    <div id="1"></div>
+    <script>
+        load("header.html");
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(1).innerHTML = req.responseText;
+        }
+    </script>
+
+    <!-- CONTENT SECTION -->
+    <div id="3"></div>
+    <script>
+
+    </script>
+
+    <!-- FOOTER -->
+    <div id="4"></div>
+    <script>
+        load("footer.html");
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
+
+</body>
+
+</html>
